@@ -1,0 +1,13 @@
+services:
+  makemkv:
+    image: jlesage/makemkv
+    ports:
+      - "5800:5800"
+    volumes:
+      - "~/MakeMKV/appdata:/config:rw"
+      - "~/MakeMKV/storage:/storage:ro"
+      - "~/MakeMKV/output:/output:rw"
+    devices:
+      - "/dev/sr0:/dev/sr0"
+      # - "/dev/sg2:/dev/sg2"
+    privileged: true
