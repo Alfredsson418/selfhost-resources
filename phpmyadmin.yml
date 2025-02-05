@@ -10,7 +10,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     # restart: unless-stopped
   phpmyadmin:
-    image: phpmyadmin/latest
+    image: phpmyadmin:latest
     container_name: phpmyadmin
     environment:
       PMA_HOST: db
